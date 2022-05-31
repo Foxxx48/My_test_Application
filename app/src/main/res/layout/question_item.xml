@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="@dimen/radius_app">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrt_lout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Add image view, We will not set any data here.-->
+
+
+        <!--Text view for showing the language name-->
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Платформа Андроид основывается на операционной системе: "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_variant_answer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_variant_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Linux MAC
+                            Unix
+                            Windows CE
+                            Windows XP"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/expanded_view"
+            app:layout_constraintTop_toBottomOf="@+id/tv_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <RelativeLayout
+            android:id="@+id/expanded_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_variant_answer">
+
+            <!--Text View for showing the exp-->
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:text="Ответ: Linux" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
